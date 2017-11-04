@@ -134,6 +134,7 @@ class App extends Component {
     if (data.length > 0 && searchString !== 0) {
       return (
         data.map(gif => {
+          const postDate = new Date(gif.import_datetime);
           return (
             <SearchResult
               className={`gif gif-${gif.id} col-xs-6 col-sm-4 col-md-3`}
@@ -146,9 +147,8 @@ class App extends Component {
                 <SearchResultHeading>
                   {gif.title}
                 </SearchResultHeading>
-                <time>
-                  Posted on {new Date(gif.import_datetime)
-                    .toDateString()}
+                <time dateTime={postDate.toISOString()}>
+                  Posted on {postDate.toDateString()}
                 </time>
                 <p><a href={gif.url}>View on Giphy</a></p>
               </div>
