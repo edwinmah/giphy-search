@@ -5,10 +5,9 @@ script:
 - yarn build
 before_deploy:
 - sed -i '/build/d' .gitignore
-after_deploy:
-- yarn deploy
 local_dir: build
 deploy:
+- yarn deploy
   provider: pages
   skip_cleanup: true
   github_token:
