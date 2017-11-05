@@ -3,6 +3,8 @@ node_js:
 - 8.7.0
 script:
 - yarn build
+- yarn global add serve
+- serve -s build
 before_deploy:
 - sed -i '/build/d' .gitignore
 local_dir: build
