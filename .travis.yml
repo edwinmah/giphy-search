@@ -7,7 +7,6 @@ before_deploy:
 - sed -i '/build/d' .gitignore
 local_dir: build
 deploy:
-- yarn deploy
   provider: pages
   skip_cleanup: true
   github_token:
