@@ -1,7 +1,7 @@
 {
   "name": "giphy-search",
   "version": "0.1.0",
-  "homepage" : "https://edwinmah.github.io/giphy-search/",
+  "homepage" : "https://edwinmah.github.io/",
   "dependencies": {
     "bootstrap": "3",
     "react": "^16.0.0",
