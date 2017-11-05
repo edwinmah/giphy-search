@@ -5,7 +5,6 @@ import MainContent from './components/mainContent';
 import Footer from './components/footer';
 import styled from 'styled-components';
 import { media } from './style-utils';
-import fetch from './fetch';
 import {
   baseUrl,
   endpoint,
@@ -85,11 +84,18 @@ class App extends Component {
     
     // GET default data
     fetch(requestUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
       .then(gifs => {
         this.setState({
           data: gifs.data
         });
       })
+      .catch(error => console.log(error))
   }
 
   handleChange(e) {
@@ -107,11 +113,18 @@ class App extends Component {
 
     // GET the data
     fetch(requestUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response.json();
+      })
       .then(gifs => {
         this.setState({
           data: gifs.data
         });
       })
+      .catch(error => console.log(error))
   }
 
   renderStatus() {
