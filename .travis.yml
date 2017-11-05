@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 8.7.0
 before_deploy:
-- sed -i '/target/d' .gitignore
+- sed -i '/build/d' .gitignore
 local_dir: build
 deploy:
   provider: pages
