@@ -43,6 +43,12 @@ Use this app to search for GIFs from [GIPHY](https://giphy.com/).
 		or
 		yarn deploy
 
+### Screenshot
+
+![Search Results](https://user-images.githubusercontent.com/10244137/32419416-9612f672-c247-11e7-9c1f-46add3cb91aa.png)
+
+Fig. 1 – Search results
+
 ### Potential Features
 
 * Allow users to set the limit (up to a max, of course) on number of GIFs to retrieve
