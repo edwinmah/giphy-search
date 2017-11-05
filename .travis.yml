@@ -5,6 +5,8 @@ script:
 - yarn build
 before_deploy:
 - sed -i '/build/d' .gitignore
+after_deploy:
+- yarn deploy
 local_dir: build
 deploy:
   provider: pages
