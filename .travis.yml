@@ -7,8 +7,8 @@ before_deploy:
 - sed -i '/build/d' .gitignore
 local_dir: build
 deploy:
+  provider: script
   script: yarn deploy
-  provider: pages
   skip_cleanup: true
   github_token:
     secure: xrJTUUXAbgWqavoYxUqOCYkm8br4TnBriWEy10vN+2uw4B4LziVhUKJe8LhXFHJaIilpda/jcAoYRjfnbnMId/jY2YwLiiEHlD9+rQ4yfQl0CoM7O3tB1ZccIvSRUN8oyi05qB1/RZrDZrYzS56z66nteINHPiS0+oJzsjzaygTYuVRFCT6ypRRQ12wsNojPS2McifQEgabhyQdB+e2No8VBneA0Rg76WPECU4jHcVh96e2IpNtIncTtthLlz4FGiNIFPDp5LKjy116VbXeMlGjvjC4sA+zxXc/dCf6Pjc2rWcF8zhwcxgoaFbckvRc7VREEEQAf0ieRA8xKoAq2eaa1JU6+qMdeSYJLWiy7FFUF+HS4aD5LL4ZJ41AHaZRiaScd3FnXSlwHrXnoLWP6HzBhuBqXLIDoSxu/ORnAnf/lDgfn4IRqIXD2nbcCIKSDTg5roD81R5RRpGET7nDEEjyC1YAqy0aSSkBFPL+Yy5ZWQVUILjCBKLLnppkvbiwEC6ooN/gw6CLpqkhr/mcRX4XAUi+2O4/AUWcIosOMMDHU4btyFXk+oFr4GlciptmVckKeFlBDOppZoMyO40oi+BunyIiaukoBgeIhTVcObaAYo7oItt0FkPingUeiSSyaC5ILqa0ai7sN+NdQsysCDfMp4uCmqoJpVaarMqSN6Tw=
